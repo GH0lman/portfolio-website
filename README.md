@@ -42,11 +42,12 @@ public/      > static assets
 
 ## Roadmap
 
+- [x] Project Setup
 - [ ] Home / Hero Section
 - [ ] Projects Showcase
 - [ ] Skills Section
 - [ ] Contact Form
-- [ ] Custom Domain Setup
+- [x] Custom Domain Setup
 - [ ] CV Download
 
 ## License
