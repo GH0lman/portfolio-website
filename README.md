@@ -37,7 +37,9 @@ Open [http://localhost:3000](http://localhost:3000) to view locally.
 ```bash
 app/         > pages and routing
 components/  > reusable UI components
+lib/         > utilities, helpers, constants
 public/      > static assets
+styles/      > any global styles
 ```
 
 ## Roadmap
