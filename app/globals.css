@@ -1,26 +1,46 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Typography */
+  --font-sans: 'Outfit Variable', sans-serif;
+
+  /* Website Colours - Dark Portfolio Palette */
+  --color-background:     #0F0F1A;
+  --color-surface:        #16162A;
+  --color-border:         #ffffff14;
+
+  --color-text-primary:   #F1F5F9;
+  --color-text-secondary: #94A3B8;
+  --color-text-muted:     #64748B;
+
+  --color-accent:         #6366F1;
+  --color-accent-soft:    #6366f126;
+  --color-accent-hover:   #818CF8;
+
+  --color-success:        #4ADE80;
+  --color-failed:         #DE4F4A;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Sensible Defaults */
+img, video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
