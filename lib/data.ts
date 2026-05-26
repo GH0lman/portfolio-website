@@ -13,6 +13,21 @@ export const portfolioData = {
     { name: 'Node.js' },
   ],
   projects: [
-    { name: 'Portfolio Website', desc: 'Project portfolio for presenting my work.', tech: ['Next.js', 'Tailwind.css'] },
+    {
+      name: 'Portfolio Website',
+      slug: 'portfolio-website',
+      desc: 'Personal portfolio built with Next.js and Tailwind CSS.',
+      tech: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+      image: '/public/george-holman.png',
+      github: 'https://github.com/GH0lman/portfolio',
+      live: 'https://georgeholman.dev',
+      // detail page fields
+      problem: 'Needed a professional presence to present projects to recruiters.',
+      approach: 'Built with Next.js App Router, self-hosted domain, and Vercel deployment.',
+      learnings: 'Learned the importance of keeping structure separate from styling early in the build.',
+    },
   ],
 }
+
+// Derive the Project type directly from the data shape
+export type Project = typeof portfolioData.projects[number]

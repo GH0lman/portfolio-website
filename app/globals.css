@@ -5,30 +5,29 @@
   --font-sans: 'Outfit Variable', sans-serif;
 
   /* Website Colours - Dark Portfolio Palette */
-  --color-background:     #0F0F1A;
-  --color-surface:        #16162A;
-  --color-border:         #ffffff14;
+  --color-background:     #0F131A;
+  --color-surface:        #182236;
+  --color-edge:           #FFFFFF14;
 
-  --color-text-primary:   #F1F5F9;
-  --color-text-secondary: #94A3B8;
-  --color-text-muted:     #64748B;
+  --color-primary:        #F1F5F9;
+  --color-secondary:      #94A3B8;
+  --color-muted:          #64748B;
 
-  --color-accent:         #6366F1;
-  --color-accent-soft:    #6366f126;
-  --color-accent-hover:   #818CF8;
+  --color-accent:         #6398F1;
+  --color-accent-soft:    #6398F126;
+  --color-accent-hover:   #81B6F8;
 
   --color-success:        #4ADE80;
-  --color-failed:         #DE4F4A;
+  --color-error:          #DE4F4A;
 }
 
 /* Base */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
 body {
   background-color: var(--color-background);
-  color: var(--color-text-primary);
+  background-image:
+    radial-gradient(ellipse 80% 80% at 20% -10%, #6398F11F, transparent),
+    radial-gradient(ellipse 80% 80% at 80% 110%, #6398F11F, transparent);
+  color: var(--text-primary);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -38,9 +37,4 @@ body {
 img, video {
   max-width: 100%;
   display: block;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
