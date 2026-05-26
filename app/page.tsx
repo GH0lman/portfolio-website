@@ -2,15 +2,15 @@ import { portfolioData as data } from '@/lib/data'
 import ProjectCard from '@/components/ProjectCard'
 
 {/* 
-  Phase 1: Skeleton
-  Goal: Create a static skeleton for the home page.
-  Next: Develop layout and style of page.
+  Phase 2: Visual Styling
+  Goal: Develop the layout and style of the page.
+  Next: Update Skills Section.
 */} 
 
 export default function Home() {
   return (
-    <main className="max-w-4xl mx-auto px-6 py-16 space-y-12">
-      {/* HERO */}
+    <main className="max-w-4xl space-y-12">
+      {/* HERO Section */}
       <section className="space-y-4">
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-success" />
@@ -25,7 +25,7 @@ export default function Home() {
         <p className="text-secondary">{data.tagline}</p>
       </section>
 
-      {/* CONTACT PILLS */}
+      {/* CONTACT PILLS Section */}
       <section className="flex flex-wrap gap-3">
         {[
           { label: data.location },
@@ -51,7 +51,7 @@ export default function Home() {
         )}
       </section>
 
-      {/* SKILLS */}
+      {/* SKILLS Section */}
       <section className="space-y-4">
         <h2 className="text-xl tracking-widest text-accent uppercase">Skills</h2>
         <div className="space-y-4">
@@ -72,7 +72,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROJECTS */}
+      {/* PROJECTS Section */}
       <section className="space-y-6">
         <h2 className="text-xl tracking-widest text-accent uppercase">Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
