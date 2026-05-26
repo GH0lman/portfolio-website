@@ -18,7 +18,7 @@ export const portfolioData = {
       slug: 'portfolio-website',
       desc: 'Personal portfolio built with Next.js and Tailwind CSS.',
       tech: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-      image: '/public/george-holman.png',
+      image: '/images/projects/placeholder.png',
       github: 'https://github.com/GH0lman/portfolio',
       live: 'https://georgeholman.dev',
       // detail page fields
