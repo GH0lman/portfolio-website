@@ -76,8 +76,8 @@ export default function Home() {
       <section className="space-y-6">
         <h2 className="text-xl tracking-widest text-accent uppercase">Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {data.projects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
+          {data.projects.map((project, index) => (
+            <ProjectCard key={project.slug} project={project} priority={index === 0} />
           ))}
         </div>
       </section>

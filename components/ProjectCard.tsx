@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import type { Project } from '@/lib/data'
 
-export default function ProjectCard({ project }: { project: Project }) {
+export default function ProjectCard({ project, priority = false }: { project: Project, priority?: boolean }) {
   const { name, slug, desc, tech, image } = project
 
   return (
@@ -15,6 +15,8 @@ export default function ProjectCard({ project }: { project: Project }) {
             alt={`${name} screenshot`}
             fill
             className="object-cover"
+            sizes="(max-width: 640px) 100vw, 50vw"
+            loading={priority ? 'eager' : 'lazy'}
           />
         </div>
 
