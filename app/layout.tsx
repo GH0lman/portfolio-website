@@ -1,7 +1,12 @@
 import type { Metadata, Viewport } from 'next'
-import '@fontsource-variable/outfit/wght.css'
+
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
+
 import './globals.css'
 import { portfolioData } from '@/lib/data'
+
+import '@fontsource-variable/outfit/wght.css'
 
 export const metadata: Metadata = {
   title: {
@@ -32,6 +37,8 @@ export default function RootLayout({ children }: { children: React.ReactNode;}) 
     <html lang="en-NZ">
       <body className="min-h-full flex flex-col antialiased">
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
