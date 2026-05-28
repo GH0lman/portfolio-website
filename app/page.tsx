@@ -1,5 +1,6 @@
 import { portfolioData as data } from '@/lib/data'
 import ProjectCard from '@/components/ProjectCard'
+import TechStack from '@/components/TechStack'
 
 {/* 
   Phase 2: Visual Styling
@@ -18,20 +19,31 @@ export default function Home() {
             Open to opportunities
           </span>
         </div>
-        <h1 className="text-5xl text-primary font-bold tracking-tight">
-          {data.name}
-        </h1>
-        <p className="text-xl text-accent font-medium">{data.title}</p>
-        <p className="text-secondary">{data.tagline}</p>
+
+        <div>
+          <h1 className="text-5xl text-primary font-bold tracking-tight">{data.name}</h1>
+          <p className="text-xl text-accent font-medium mt-2">{data.title}</p>
+          <p className="text-secondary mt-3">{data.tagline}</p>
+        </div>
+
+        {/* Stats row — concrete facts only */}
+        <div className="flex gap-10 pt-2">
+          {data.stats.map(({ label, value }) => (
+            <div key={label}>
+              <div className="text-3xl font-bold text-primary">{value}</div>
+              <div className="text-xs text-muted mt-1 tracking-wide uppercase">{label}</div>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* CONTACT PILLS Section */}
       <section className="flex flex-wrap gap-3">
         {[
           { label: data.location },
-          { label: data.email, href: `mailto:${data.email}` },
-          { label: data.github, href: `https://${data.github}` },
-          { label: data.linkedin, href: `https://${data.linkedin}` },
+          { label: 'Email Me', href: `mailto:${data.email}` },
+          { label: 'GitHub', href: `https://${data.github}` },
+          { label: 'LinkedIn', href: `https://${data.linkedin}` },
         ].map(({ label, href }) =>
           href ? (
             <a
@@ -51,27 +63,6 @@ export default function Home() {
         )}
       </section>
 
-      {/* SKILLS Section */}
-      <section className="space-y-4">
-        <h2 className="text-xl tracking-widest text-accent uppercase">Skills</h2>
-        <div className="space-y-4">
-          {data.skills.map((skill) => (
-            <div key={skill.name}>
-              <div className="flex justify-between mb-2">
-                <span className="text-sm text-primary">{skill.name}</span>
-                <span className="text-xs text-muted">0%</span>
-              </div>
-              <div className="h-1 rounded-full border-edge">
-                <div
-                  className="h-1 rounded-full bg-accent"
-                  style={{ width: `$test%` }}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* PROJECTS Section */}
       <section className="space-y-6">
         <h2 className="text-xl tracking-widest text-accent uppercase">Projects</h2>
@@ -81,6 +72,13 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* TECH STACK Section*/}
+      <section className="space-y-6">
+        <h2 className="text-xl tracking-widest text-accent uppercase">Technologies</h2>
+        <TechStack stack={data.techStack} projects={data.projects} />
+      </section>
+
     </main>
   )
 }
