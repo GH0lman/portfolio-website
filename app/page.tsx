@@ -37,30 +37,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CONTACT PILLS Section */}
-      <section className="flex flex-wrap gap-3">
-        {[
-          { label: data.location },
-          { label: 'Email Me', href: `mailto:${data.email}` },
-          { label: 'GitHub', href: `https://${data.github}` },
-          { label: 'LinkedIn', href: `https://${data.linkedin}` },
-        ].map(({ label, href }) =>
-          href ? (
-            <a
-              key={label}
-              href={href}
-              target={href.startsWith('mailto') ? undefined : '_blank'}
-              rel="noopener noreferrer"
-              className="px-4 py-1.5 rounded-full text-secondary border border-edge hover:border-accent hover:text-accent transition-colors"
-            >
-              {label}
-            </a>
-          ) : (
-            <span key={label} className="px-4 py-1.5 rounded-full text-secondary border border-edge">
-              {label}
-            </span>
-          )
-        )}
+      {/* ABOUT ME Section */}
+      <section className="space-y-6">
+        <h2 className="text-xl tracking-widest text-accent uppercase">About Me</h2>
+        <p className="text-secondary mt-3">{data.bio}</p>
       </section>
 
       {/* PROJECTS Section */}
@@ -77,6 +57,31 @@ export default function Home() {
       <section className="space-y-6">
         <h2 className="text-xl tracking-widest text-accent uppercase">Technologies</h2>
         <TechStack stack={data.techStack} projects={data.projects} />
+      </section>
+
+      {/* CONTACT INFO Section */}
+      <section className="space-y-6">
+        <h2 className="text-xl tracking-widest text-accent uppercase">Contact Info</h2>
+        <div className="flex flex-wrap gap-3">
+          {[
+            { label: data.location },
+            { label: 'Call Me', href: `tel:${data.phone}` },
+            { label: 'Email Me', href: `mailto:${data.email}` },
+            { label: 'GitHub', href: `https://${data.github}` },
+            { label: 'LinkedIn', href: `https://${data.linkedin}` },
+          ].map(({ label, href }) => (
+            <a
+              key={label}
+              href={href}
+              target={href && !href.startsWith('mailto') ? '_blank' : undefined}
+              rel="noopener noreferrer"
+              className={`px-4 py-1.5 rounded-full border border-edge text-secondary hover:border-accent hover:text-accent transition-colors
+                ${href ? 'cursor-pointer' : 'cursor-default'}`}
+            >
+              {label}
+            </a>
+          ))}
+        </div>
       </section>
 
     </main>

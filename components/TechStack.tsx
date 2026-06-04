@@ -32,7 +32,7 @@ export default function TechStack({ stack, projects }: Props) {
               return (
                 <div
                   key={tech}
-                  className="group flex items-start justify-between gap-4 py-2 border-b border-border"
+                  className="group flex items-start justify-between gap-4 py-2 border-b border-edge"
                 >
                   <span className="text-sm text-primary">{tech}</span>
 
