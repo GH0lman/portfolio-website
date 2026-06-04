@@ -1,9 +1,11 @@
 export const portfolioData = {
   name: 'George Holman',
   title: 'Graduate Software Developer',
-  tagline: 'I develop efficient and scalable software and website products.',
+  tagline: 'I develop clear, accessible software tools, focused on providing a positive user experience.',
+  bio: 'I am a passionate and dedicated software developer with a strong background in software development and a passion for creating intuitive and user-friendly interfaces. I am always eager to learn new technologies and apply them in practical scenarios to make the products not only effective, but available for anyone to use.',
   status: 'Open to opportunities',
-  location: 'Auckland, NZ',
+  location: 'Kumeu, Auckland 0891, NZ',
+  phone: '+64274984330',
   email: 'georgeholmanwork@gmail.com',
   github: 'github.com/GH0lman',
   linkedin: 'linkedin.com/in/george-holman-366a7b350/',

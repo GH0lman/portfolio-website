@@ -27,6 +27,7 @@ body {
   background-image:
     radial-gradient(ellipse 80% 80% at 20% -10%, #6398F11F, transparent),
     radial-gradient(ellipse 80% 80% at 80% 110%, #6398F11F, transparent);
+  background-attachment: fixed;
   color: var(--text-primary);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
