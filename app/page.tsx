@@ -1,6 +1,7 @@
 import { portfolioData as data } from '@/lib/data'
 import ProjectCard from '@/components/ProjectCard'
 import TechStack from '@/components/TechStack'
+import { FiMapPin, FiGithub, FiLinkedin, FiMail, FiFileText } from 'react-icons/fi'
 
 {/* 
   Phase 2: Visual Styling
@@ -10,7 +11,7 @@ import TechStack from '@/components/TechStack'
 
 export default function Home() {
   return (
-    <main className="max-w-4xl space-y-12">
+    <main className="max-w-6xl space-y-12">
       {/* HERO Section */}
       <section className="space-y-4">
         <div className="flex items-center gap-2">
@@ -26,10 +27,10 @@ export default function Home() {
           <p className="text-secondary mt-3">{data.tagline}</p>
         </div>
 
-        {/* Stats row — concrete facts only */}
-        <div className="flex gap-10 pt-2">
+        {/* Stats row - concrete facts only */}
+        <div className="flex gap-10 pt-6 justify-evenly">
           {data.stats.map(({ label, value }) => (
-            <div key={label}>
+            <div key={label} className="flex flex-col items-center">
               <div className="text-3xl font-bold text-primary">{value}</div>
               <div className="text-xs text-muted mt-1 tracking-wide uppercase">{label}</div>
             </div>
@@ -62,25 +63,59 @@ export default function Home() {
       {/* CONTACT INFO Section */}
       <section className="space-y-6">
         <h2 className="text-xl tracking-widest text-accent uppercase">Contact Info</h2>
-        <div className="flex flex-wrap gap-3">
-          {[
-            { label: data.location },
-            { label: 'Call Me', href: `tel:${data.phone}` },
-            { label: 'Email Me', href: `mailto:${data.email}` },
-            { label: 'GitHub', href: `https://${data.github}` },
-            { label: 'LinkedIn', href: `https://${data.linkedin}` },
-          ].map(({ label, href }) => (
-            <a
-              key={label}
-              href={href}
-              target={href && !href.startsWith('mailto') ? '_blank' : undefined}
-              rel="noopener noreferrer"
-              className={`px-4 py-1.5 rounded-full border border-edge text-secondary hover:border-accent hover:text-accent transition-colors
-                ${href ? 'cursor-pointer' : 'cursor-default'}`}
-            >
-              {label}
-            </a>
-          ))}
+        <div className="flex flex-wrap items-center justify-evenly gap-4">
+
+          {/* Secondary - Location (no link) */}
+          <span className="flex items-center gap-2 text-secondary">
+            <FiMapPin/>
+            {data.location}
+          </span>
+
+          {/* Secondary - GitHub */}
+          <a
+            href={`https://${data.github}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-secondary hover:text-accent transition-colors"
+          >
+            <FiGithub/>
+            GitHub
+          </a>
+
+          {/* Secondary - LinkedIn */}
+          <a
+            href={`https://${data.linkedin}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-secondary hover:text-accent transition-colors"
+          >
+            <FiLinkedin/>
+            LinkedIn
+          </a>
+
+          {/* Divider */}
+          <span className="text-secondary opacity-30 hidden sm:inline">|</span>
+
+          {/* Primary - Email Me */}
+          <a
+            href={`mailto:${data.email}`}
+            className="flex items-center gap-2 px-5 py-2 rounded-full border border-accent text-accent hover:bg-accent hover:text-background transition-colors"
+          >
+            <FiMail/>
+            Email Me
+          </a>
+
+          {/* Primary - View CV */}
+          <a
+            href="/GHolman-CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-5 py-2 rounded-full bg-accent text-background hover:opacity-90 transition-opacity"
+          >
+            <FiFileText/>
+            View my CV
+          </a>
+
         </div>
       </section>
 

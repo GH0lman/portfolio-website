@@ -2,10 +2,9 @@ export const portfolioData = {
   name: 'George Holman',
   title: 'Graduate Software Developer',
   tagline: 'I develop clear, accessible software tools, focused on providing a positive user experience.',
-  bio: 'I am a passionate and dedicated software developer with a strong background in software development and a passion for creating intuitive and user-friendly interfaces. I am always eager to learn new technologies and apply them in practical scenarios to make the products not only effective, but available for anyone to use.',
+  bio: 'I am a Computing Systems student, graduating at the end of June 2026 from Unitec Institute of Technology, with a major passion in software development and a keen interest in building accessible software tools. I am partically focused on web development using full stack tools and skills to provide available websites for users with disabilities.',
   status: 'Open to opportunities',
-  location: 'Kumeu, Auckland 0891, NZ',
-  phone: '+64274984330',
+  location: 'Auckland, NZ',
   email: 'georgeholmanwork@gmail.com',
   github: 'github.com/GH0lman',
   linkedin: 'linkedin.com/in/george-holman-366a7b350/',
@@ -14,7 +13,7 @@ export const portfolioData = {
   stats: [
     { label: 'Projects', value: '1' },
     { label: 'Degree', value: 'BCS' },
-    { label: 'Graduating', value: '2026' },
+    { label: 'Graduating', value: 'June, 2026' },
   ],
 
   // Grouped tech list - Categorisation of learnt skills.
