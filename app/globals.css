@@ -8,6 +8,7 @@
   --color-background:     #0F131A;
   --color-surface:        #182236;
   --color-edge:           #FFFFFF14;
+  --color-fade:           #6398F11F;
 
   --color-primary:        #F1F5F9;
   --color-secondary:      #94A3B8;
@@ -25,8 +26,8 @@
 body {
   background-color: var(--color-background);
   background-image:
-    radial-gradient(ellipse 80% 80% at 20% -10%, #6398F11F, transparent),
-    radial-gradient(ellipse 80% 80% at 80% 110%, #6398F11F, transparent);
+    radial-gradient(ellipse 80% 80% at 20% -10%, var(--color-fade), transparent),
+    radial-gradient(ellipse 80% 80% at 80% 110%, var(--color-fade), transparent);
   background-attachment: fixed;
   color: var(--text-primary);
   font-family: var(--font-sans);
@@ -46,4 +47,13 @@ main {
 img, video {
   max-width: 100%;
   display: block;
+}
+
+/* Subtle grid overlay - used in ProjectCard thumbnail */
+.bg-grid {
+  background-image:
+    linear-gradient(var(--color-edge) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-edge) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.25;
 }

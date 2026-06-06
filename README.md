@@ -3,7 +3,7 @@
 A personal portfolio built with `Next.js`, showcasing my projects, 
 skills, and experience as a graduating software developer.
 
-**Live site:** [georgeholman.dev](https://georgeholman.dev) *(To Be Implemented and Hosted)*
+**Live site:** [georgeholman.dev](https://georgeholman.dev)
 
 ## About
 
@@ -39,18 +39,17 @@ app/         > pages and routing
 components/  > reusable UI components
 lib/         > utilities, helpers, constants
 public/      > static assets
-styles/      > any global styles
 ```
 
 ## Roadmap
 
 - [x] Project Setup
-- [ ] Home / Hero Section
-- [ ] Projects Showcase
-- [ ] Skills Section
-- [ ] Contact Form
+- [x] Home / Hero Section
+- [x] Projects Showcase
+- [x] Skills Section
+- [x] Contact Form
 - [x] Custom Domain Setup
-- [ ] CV Download
+- [x] CV Download
 
 ## License
 

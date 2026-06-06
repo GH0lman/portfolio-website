@@ -15,7 +15,7 @@ export default function TechStack({ stack, projects }: Props) {
   }
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 sm:grid-cols-4 gap-8">
       {stack.map(({ category, items }) => (
         <div key={category} className="space-y-3">
 
