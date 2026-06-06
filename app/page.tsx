@@ -1,12 +1,12 @@
 import { portfolioData as data } from '@/lib/data'
 import ProjectCard from '@/components/ProjectCard'
 import TechStack from '@/components/TechStack'
+import Image from 'next/image'
 import { FiMapPin, FiGithub, FiLinkedin, FiMail, FiFileText } from 'react-icons/fi'
 
 {/* 
-  Phase 2: Visual Styling
-  Goal: Develop the layout and style of the page.
-  Next: Update Skills Section.
+  Phase 3: Functionality Finalized
+  Completed design for Homepage. Redesign in the future if needed.
 */} 
 
 export default function Home() {
@@ -21,14 +21,27 @@ export default function Home() {
           </span>
         </div>
 
-        <div>
-          <h1 className="text-5xl text-primary font-bold tracking-tight">{data.name}</h1>
-          <p className="text-xl text-accent font-medium mt-2">{data.title}</p>
-          <p className="text-secondary mt-3">{data.tagline}</p>
+        {/* Name + Photo row */}
+        <div className="flex items-center justify-between gap-6">
+          <div>
+            <h1 className="text-5xl text-primary font-bold tracking-tight">{data.name}</h1>
+            <p className="text-xl text-accent font-medium mt-2">{data.title}</p>
+            <p className="text-secondary mt-3">{data.tagline}</p>
+          </div>
+          <div className="relative shrink-0 w-48 h-48 rounded-2xl overflow-hidden border border-edge">
+            <Image
+              src="/images/profile.jpg"
+              alt="Profile photo"
+              fill
+              className="object-cover"
+              sizes="144px"
+              priority
+            />
+          </div>
         </div>
 
-        {/* Stats row - concrete facts only */}
-        <div className="flex gap-10 pt-6 justify-evenly">
+        {/* Stats row */}
+        <div className="flex gap-10 pt-10 justify-evenly">
           {data.stats.map(({ label, value }) => (
             <div key={label} className="flex flex-col items-center">
               <div className="text-3xl font-bold text-primary">{value}</div>
@@ -41,7 +54,7 @@ export default function Home() {
       {/* ABOUT ME Section */}
       <section className="space-y-6">
         <h2 className="text-xl tracking-widest text-accent uppercase">About Me</h2>
-        <p className="text-secondary mt-3">{data.bio}</p>
+        <p className="text-secondary leading-relaxed">{data.bio}</p>
       </section>
 
       {/* PROJECTS Section */}
@@ -107,7 +120,7 @@ export default function Home() {
 
           {/* Primary - View CV */}
           <a
-            href="/GHolman-CV.pdf"
+            href="/documents/GHolman-CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-5 py-2 rounded-full bg-accent text-background hover:opacity-90 transition-opacity"
