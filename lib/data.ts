@@ -3,8 +3,8 @@ import { FiGlobe, FiZap } from 'react-icons/fi'
 export const portfolioData = {
   name: 'George Holman',
   title: 'Graduate Software Developer',
-  tagline: 'I develop clear, accessible software tools, focused on providing a positive user experience.',
-  bio: 'I am a Computing Systems student, soon to graduate by the end of June 2026 from Unitec Institute of Technology, with a major passion in software development and a keen interest in building accessible software tools. I am particularly focused on web development using full stack tools and skills to provide available websites for users with disabilities, and I hope to enter a position related to Software Development, IT Work, and any other positions to continue broadening my skills in the IT field.',
+  tagline: 'Developing clear and accessible software tools, focused on providing positive user experience that makes website browsing easy for everyone.',
+  bio: 'I am an aspiring Software Developer, graduated in Computing Systems by the end of June 2026 at Unitec Institute of Technology, with major passion and a keen interest in building accessible software tools for everyone to have a chance at using. I am currently focused on learning skills in web development, including full-stack tools and skills to develop fast and efficient websites when needed. I hope to enter a full time position in Software Development, and other possible IT to continue broadening my skills in the IT field so I can put those skills into providing the tools needed for people to succeed.',
   status: 'Open to opportunities',
   location: 'Auckland, NZ',
   email: 'georgeholmanwork@gmail.com',

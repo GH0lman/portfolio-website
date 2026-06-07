@@ -22,13 +22,13 @@ export default function Home() {
         </div>
 
         {/* Name + Photo row */}
-        <div className="flex items-center justify-between gap-6">
+        <div className="flex flex-col sm:flex-row items-center gap-6">
           <div>
             <h1 className="text-5xl text-primary font-bold tracking-tight">{data.name}</h1>
             <p className="text-xl text-accent font-medium mt-2">{data.title}</p>
             <p className="text-secondary mt-3">{data.tagline}</p>
           </div>
-          <div className="relative shrink-0 w-48 h-48 rounded-2xl overflow-hidden border border-edge">
+          <div className="relative shrink-0 w-48 h-48 rounded-2xl overflow-hidden border-2 border-secondary hover:border-accent transition-colors">
             <Image
               src="/images/profile.jpg"
               alt="Profile photo"
@@ -76,7 +76,7 @@ export default function Home() {
       {/* CONTACT INFO Section */}
       <section className="space-y-6">
         <h2 className="text-xl tracking-widest text-accent uppercase">Contact Info</h2>
-        <div className="flex flex-wrap items-center justify-evenly gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-5 justify-items-center gap-4">
 
           {/* Secondary - Location (no link) */}
           <span className="flex items-center gap-2 text-secondary">
@@ -105,9 +105,6 @@ export default function Home() {
             <FiLinkedin/>
             LinkedIn
           </a>
-
-          {/* Divider */}
-          <span className="text-secondary opacity-30 hidden sm:inline">|</span>
 
           {/* Primary - Email Me */}
           <a
