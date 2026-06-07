@@ -44,7 +44,7 @@ export default function ProjectCard({ project, priority = false }: { project: Pr
         <p className="text-sm text-secondary leading-relaxed">{desc}</p>
         <div className="flex flex-wrap gap-2 pt-1">
           {tech.map((t) => (
-            <span key={t} className="text-xs px-2 py-1 rounded-md bg-accent-soft text-accent">
+            <span key={t} className="text-xs px-2 py-1 rounded-md border border-muted text-accent">
               {t}
             </span>
           ))}

@@ -36,7 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode;}) 
   return (
     <html lang="en-NZ">
       <body className="min-h-full flex flex-col antialiased">
-        {children}
+        <main>{children}</main>
         <Analytics />
         <SpeedInsights />
       </body>
