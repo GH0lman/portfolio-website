@@ -4,7 +4,7 @@ export const portfolioData = {
   name: 'George Holman',
   title: 'Graduate Software Developer',
   tagline: 'Developing clear and accessible software tools, focused on providing positive user experience that makes website browsing easy for everyone.',
-  bio: 'I am an aspiring Software Developer, graduated in Computing Systems by the end of June 2026 at Unitec Institute of Technology, with major passion and a keen interest in building accessible software tools for everyone to have a chance at using. I am currently focused on learning skills in web development, including full-stack tools and skills to develop fast and efficient websites when needed. I hope to enter a full time position in Software Development, and other possible IT to continue broadening my skills in the IT field so I can put those skills into providing the tools needed for people to succeed.',
+  bio: 'I am an aspiring Software Developer, graduated in Computing Systems by the end of June 2026 at Unitec Institute of Technology, with major passion and a keen interest in building accessible software tools for everyone to have a chance at using. I am currently focused on learning skills in web development, including full-stack tools and skills to develop fast and efficient websites when needed. I hope to enter a full-time position in Software Development, and other possible IT to continue broadening my skills in the IT field so I can put those skills into providing the tools needed for people to succeed.',
   status: 'Open to opportunities',
   location: 'Auckland, NZ',
   email: 'georgeholmanwork@gmail.com',
@@ -51,7 +51,7 @@ export const portfolioData = {
     {
       name: 'Project Rocket',
       slug: 'project-rocket',
-      desc: 'Worked with ICIB Brokerweb on automation of workflow and CRM optimisation, contributated as team leader to implementing unused features.',
+      desc: 'Worked with ICIB Brokerweb on automation of workflow and CRM optimisation, contributed as team leader to implementing unused features.',
       tech: ['XPlan Iress', 'Microsoft Form', 'Power Automate', 'Project Management', 'Team Management'],
       icon: FiZap,
     },
