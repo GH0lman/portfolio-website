@@ -15,7 +15,7 @@ export const portfolioData = {
   stats: [
     { label: 'Projects', value: '2' },
     { label: 'Degree', value: 'BCS' },
-    { label: 'Graduating', value: 'June, 2026' },
+    { label: 'Graduated', value: '2026' },
   ],
 
   // Grouped tech list - Categorisation of learnt skills.
