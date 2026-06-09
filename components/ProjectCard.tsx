@@ -6,7 +6,7 @@ function ProjectThumbnail({ icon: Icon }: { icon?: Project['icon'] }) {
   return (
     <div className="relative aspect-16/7 flex items-center justify-center overflow-hidden bg-background">
       <div className="absolute inset-0 bg-grid" />
-      <div className="relative flex items-center justify-center w-24 h-24 rounded-full border border-edge">
+      <div className="relative flex items-center justify-center w-24 h-24 rounded-full border-4 border-edge bg-background">
         {Icon
           ? <Icon size={40} className="text-muted" />
           : <span className="text-lg font-semibold text-muted select-none">?</span>
@@ -16,7 +16,7 @@ function ProjectThumbnail({ icon: Icon }: { icon?: Project['icon'] }) {
   )
 }
 
-export default function ProjectCard({ project, priority = false }: { project: Project, priority?: boolean }) {
+export default function ProjectCard({ project }: { project: Project, priority?: boolean }) {
   const { name, desc, tech, icon, github } = project
 
   return (

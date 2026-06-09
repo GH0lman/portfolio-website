@@ -1,10 +1,10 @@
-import { FiGlobe, FiZap } from 'react-icons/fi'
+import { FiGlobe, FiZap, FiCode } from 'react-icons/fi'
 
 export const portfolioData = {
   name: 'George Holman',
   title: 'Graduate Software Developer',
   tagline: 'Developing clear and accessible software tools, focused on providing positive user experience that makes website browsing easy for everyone.',
-  bio: 'I am an aspiring Software Developer, graduated in Computing Systems by the end of June 2026 at Unitec Institute of Technology, with major passion and a keen interest in building accessible software tools for everyone to have a chance at using. I am currently focused on learning skills in web development, including full-stack tools and skills to develop fast and efficient websites when needed. I hope to enter a full-time position in Software Development, and other possible IT to continue broadening my skills in the IT field so I can put those skills into providing the tools needed for people to succeed.',
+  bio: 'I an aspiring Software Developer, graduated in Computing Systems by the end of June 2026 at Unitec Institute of Technology, with major passion and a keen interest in building accessible software tools for everyone to have a chance at using. I am currently focused on learning skills in web development, including full-stack tools and skills to develop fast and efficient websites when needed. I hope to enter a full-time position in Software Development, and other possible IT to continue broadening my skills in the IT field so I can put those skills into providing the tools needed for people to succeed.',
   status: 'Open to opportunities',
   location: 'Auckland, NZ',
   email: 'georgeholmanwork@gmail.com',
@@ -13,7 +13,7 @@ export const portfolioData = {
 
   // Concrete facts - Show in hero stats
   stats: [
-    { label: 'Projects', value: '2' },
+    { label: 'Projects', value: '3' },
     { label: 'Degree', value: 'BCS' },
     { label: 'Graduated', value: '2026' },
   ],
@@ -26,7 +26,7 @@ export const portfolioData = {
     },
     {
       category: 'Backend',
-      items: ['Node.js', 'PostgreSQL', 'XPlan Iress'],
+      items: ['Node.js', 'XPlan Iress', 'FastAPI', 'PostgreSQL', 'JWT Auth'],
     },
     {
       category: 'Tools',
@@ -42,9 +42,9 @@ export const portfolioData = {
   projects: [
     {
       name: 'Portfolio Website',
-      slug: 'portfolio',
+      slug: 'portfolio-web',
       desc: 'Personal portfolio built with Next.js and Tailwind CSS, built to reinforce my web development skills and for showing off future work.',
-      tech: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'GitHub', 'Vercel', 'Version Control', 'Node.js', 'PostgreSQL'],
+      tech: ['Next.js', 'TypeScript', 'React', 'Node.js', 'Tailwind CSS', 'GitHub', 'Vercel', 'Version Control'],
       github: 'https://github.com/GH0lman/portfolio-website',
       icon: FiGlobe,
     },
@@ -54,6 +54,14 @@ export const portfolioData = {
       desc: 'Worked with ICIB Brokerweb on automation of workflow and CRM optimisation, contributed as team leader to implementing unused features.',
       tech: ['XPlan Iress', 'Microsoft Form', 'Power Automate', 'Project Management', 'Team Management'],
       icon: FiZap,
+    },
+    {
+      name: 'Splitmate API',
+      slug: 'splitmate-api',
+      desc: 'Upcoming project with creation of flat-mate expense splitting Multi-Tenant REST API website, so multiple users can create households for members and use the data privately.',
+      tech: ['FastAPI', 'PostgreSQL', 'JWT Auth'],
+      github: 'https://github.com/GH0lman/splitmate-api',
+      icon: FiCode,
     },
   ],
 }
