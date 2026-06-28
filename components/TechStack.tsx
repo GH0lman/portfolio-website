@@ -1,4 +1,4 @@
-import type { TechCategory, Project } from '@/lib/data'
+import type { TechCategory, Project } from '@/lib/db/queries'
 
 type Props = {
   stack: TechCategory[]
