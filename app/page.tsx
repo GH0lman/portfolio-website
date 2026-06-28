@@ -126,7 +126,7 @@ export default async function Home() {
 
           {/* Primary - View CV */}
           <a
-            href={`https://${config.cv_url}`}
+            href="/cv"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-5 py-2 rounded-full bg-accent text-background hover:opacity-90 transition-opacity"
