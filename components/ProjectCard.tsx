@@ -1,5 +1,5 @@
 import { FiGithub } from 'react-icons/fi'
-import type { Project } from '@/lib/data'
+import type { Project } from '@/lib/db/queries'
 
 
 function ProjectThumbnail({ icon: Icon }: { icon?: Project['icon'] }) {
