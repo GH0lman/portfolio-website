@@ -4,20 +4,20 @@ import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import './globals.css'
-import { portfolioData } from '@/lib/data'
+import { portfolioInfo as info } from '@/lib/info'
 
 import '@fontsource-variable/outfit/wght.css'
 
 export const metadata: Metadata = {
   title: {
-    default: `${portfolioData.name} - ${portfolioData.title}`,
-    template: `%s | ${portfolioData.name}`,
+    default: `${info.name} - ${info.title}`,
+    template: `%s | ${info.name}`,
   },
-  description: portfolioData.tagline,
-  authors: [{ name: portfolioData.name }],
+  description: info.tagline,
+  authors: [{ name: info.name }],
   openGraph: {
-    title: `${portfolioData.name} - ${portfolioData.title}`,
-    description: portfolioData.tagline,
+    title: `${info.name} - ${info.title}`,
+    description: info.tagline,
     url: 'https://georgeholman.dev',
     locale: 'en_NZ',
     type: 'website',
