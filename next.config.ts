@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/cv',
-        destination: 'https://tsdextzewypssyjm.public.blob.vercel-storage.com/GHolman-CV.pdf',
+        destination: 'https://tsdextzewypssyjm.public.blob.vercel-storage.com/George_Holman_CV.pdf',
       },
     ];
   },
