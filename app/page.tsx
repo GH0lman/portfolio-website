@@ -26,7 +26,7 @@ export default async function Home() {
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-success" />
           <span className="text-xs tracking-widest text-success uppercase">
-            Open to opportunities
+            {config.status}
           </span>
         </div>
 
